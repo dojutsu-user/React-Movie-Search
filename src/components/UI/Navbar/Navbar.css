@@ -1,0 +1,51 @@
+.Nav {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 252, 70);
+  height: 70px;
+  width: 100%;
+  z-index: 1;
+}
+
+.NavItems ul {
+  list-style-type: none;
+}
+
+.NavItems ul li {
+  float: left;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 3px;
+  font-size: 1.3em;
+  font-family: "IBM Plex Sans", sans-serif;
+  display: block;
+  cursor: pointer;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.NavItems {
+  float: right;
+  padding-right: 30px;
+}
+
+.NavItems ul li:hover {
+  background-color: #ffff7a;
+}
+
+.Hamburger {
+  display: none;
+}
+
+@media (max-width: 978px) {
+  .NavItems {
+    display: none;
+  }
+
+  .Hamburger {
+		display: block;
+    float: right;
+    padding: 15px;
+    cursor: pointer;
+  }
+}

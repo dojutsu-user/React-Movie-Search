@@ -1,0 +1,15 @@
+.Logo {
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	padding-left: 12px;
+	font-size: 30px;
+	padding-top: 13px;
+	float: left;
+}
+
+@media (max-width: 438px) {
+	.Logo {
+		padding-top: 20px;
+		font-size: 20px;
+		padding-right: 25px;
+	}
+}

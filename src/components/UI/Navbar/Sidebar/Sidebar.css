@@ -1,0 +1,55 @@
+.Sidebar {
+  z-index: 100;
+  background-color: #fff8ae;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Open {
+  transform: translateX(0%);
+  transition: all 0.3s ease-in;
+}
+
+.Close {
+  transform: translateX(-101%);
+  transition: all 0.3s ease-out;
+}
+
+.Sidebar ul {
+  list-style-type: none;
+}
+
+.Sidebar ul li {
+  font-size: 20px;
+  display: block;
+  padding: 5px 0;
+  margin: 10px 0;
+  display: block;
+  cursor: pointer;
+}
+
+.Sidebar div {
+  padding-bottom: 25px;
+}
+
+.SidebarLogo div {
+  font-size: 32px;
+}
+
+.SidebarNavItems button {
+  margin: 10px 0;
+}
+
+@media (min-width: 410px) {
+  .Sidebar {
+    width: 300px;
+  }
+
+  .Sidebar button {
+    margin: 5px 2px;
+    padding: 3px 0;
+  }
+}

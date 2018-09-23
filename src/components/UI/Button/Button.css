@@ -1,0 +1,18 @@
+.Button {
+    width: 100px;
+    margin: 0 5px;
+    height: 28px;
+    background-color: #ffb950;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.Button:focus {
+    border: none;
+    outline: none;
+}
+
+.Button:active {
+    background-color: rgb(255, 208, 146);
+}
