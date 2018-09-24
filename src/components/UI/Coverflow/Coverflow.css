@@ -1,6 +1,11 @@
-.Carousel {
+.Coverflow {
   overflow-x: hidden !important;
   width: 100%;
   display: flex;
   align-items: flex-start;
+}
+
+.title {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-left: 60px;
 }
