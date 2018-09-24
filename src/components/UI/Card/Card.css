@@ -1,18 +1,18 @@
 .Card {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+	padding: 0;
+	float: left;
 }
 
 .blogCard {
   width: 300px;
   height: 450px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 	text-align: center;
-	margin: 30px;
 }
 
 .blogCard .colorOverlay {

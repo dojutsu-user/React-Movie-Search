@@ -1,4 +1,17 @@
 .title {
   font-family: "IBM Plex Sans", sans-serif;
-  margin-left: 60px;
+  margin: 0px auto;
+  width: 70%;
+}
+
+.container {
+  width: 80%;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.block {
+  display: inline-block;
+  margin: 10px
 }
