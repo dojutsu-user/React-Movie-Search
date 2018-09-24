@@ -1,0 +1,6 @@
+.Carousel {
+  overflow-x: hidden !important;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
