@@ -52,7 +52,9 @@ class HomePage extends Component {
     AxiosInstance.get(
       `/discover/movie?primary_release_year=${currentYear}&primary_release_date.lte=${currentDate}&sort_by=popularity.desc&api_key=${API_KEY}`
     )
-      .then(response => this.setState({ topMovies: response.data.results }))
+      .then(response =>
+        this.setState({ topMovies: response.data.results.slice(0, 9) })
+      )
       .catch(error => {
         alert(
           `${error.response.data.status_message}\nStatus Code: ${
