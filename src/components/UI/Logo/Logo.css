@@ -4,6 +4,8 @@
 	font-size: 30px;
 	padding-top: 13px;
 	float: left;
+	display: block;
+	cursor: pointer;
 }
 
 @media (max-width: 438px) {

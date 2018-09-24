@@ -3,6 +3,7 @@ import Navbar from "../../components/UI/Navbar/Navbar";
 import Sidebar from "../../components/UI/Navbar/Sidebar/Sidebar";
 import Backdrop from "../../components/UI/Backdrop/Backdrop";
 import Homepage from "../HomePage/HomePage";
+import Footer from "../../components/Footer/Footer";
 
 class Main extends Component {
   state = {
@@ -23,6 +24,7 @@ class Main extends Component {
           clicked={this.toggleSidebarHandler}
         />
         <Homepage />
+        <Footer />
       </React.Fragment>
     );
   }

@@ -9,7 +9,7 @@ class Card extends Component {
         <div
           className={[cssClass.blogCard, cssClass.springFever].join(" ")}
           style={{
-            background: `url(${posterUrl}) no-repeat`
+            background: `url(${posterUrl}) no-repeat`,
           }}
         >
           <div className={cssClass.titleContent}>
