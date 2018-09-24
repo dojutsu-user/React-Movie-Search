@@ -16,21 +16,16 @@ class Card extends Component {
             <h3 className={cssClass.h3}>{this.props.name}</h3>
             <hr className={cssClass.hr} />
             <div className={cssClass.intro}>
-              One man spent the last 13 years of his life crossing them.
+              {new Date(this.props.releaseDate).toDateString()}
             </div>
           </div>
           <div className={cssClass.cardInfo}>{this.props.overview}</div>
           <div className={cssClass.utilityInfo}>
             <ul className={cssClass.utilityList}>
-              <li className={cssClass.comments}>
-                <span className="fas fa-clock fa-lg"> </span>
-                {"  "}
-                103 Minutes
-              </li>
               <li className={cssClass.date}>
                 <i className="fa fa-language fa-lg"> </i>
                 {"  "}
-                English
+                {this.props.originalLanguage.toUpperCase()}
               </li>
             </ul>
           </div>
