@@ -1,8 +1,8 @@
 .Card {
   box-sizing: border-box;
   margin: 0;
-	padding: 0;
-	float: left;
+  padding: 0;
+  float: left;
 }
 
 .blogCard {
@@ -12,7 +12,11 @@
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-	text-align: center;
+  text-align: center;
+}
+
+.blogCard:hover .titleContent .h3 {
+  display: none;
 }
 
 .blogCard .colorOverlay {
@@ -25,6 +29,7 @@
   left: 0;
   transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
+
 .blogCard .gradientOverlay {
   background-image: -webkit-linear-gradient(
     rgba(0, 0, 0, 0) 0%,
@@ -49,16 +54,24 @@
   left: 0;
   z-index: 15;
 }
+
 .blogCard:hover .cardInfo {
   opacity: 1;
   bottom: 120px;
 }
+
 .blogCard:hover .colorOverlay {
   background: rgba(41, 41, 41, 0.8);
 }
+
 .blogCard:hover .intro {
-	color: rgb(48, 48, 48);
+  display: none;
 }
+
+.blogCard:hover .hr {
+  display: none;
+}
+
 .titleContent {
   text-align: center;
   margin: 70px 0 0 0;
@@ -68,6 +81,7 @@
   top: 0;
   left: 0;
 }
+
 .h3 {
   font-size: 20px;
   font-weight: 500;
@@ -76,6 +90,7 @@
   font-family: "Roboto", sans-serif;
   margin-bottom: 0;
 }
+
 .hr {
   width: 50px;
   height: 3px;
@@ -83,6 +98,7 @@
   border: 0;
   background: #d0bb57;
 }
+
 .intro {
   width: 170px;
   margin: 0 auto;
@@ -92,6 +108,7 @@
   font-style: italic;
   line-height: 18px;
 }
+
 .cardInfo {
   width: 100%;
   position: absolute;
@@ -107,18 +124,21 @@
   opacity: 0;
   transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
+
 .utilityInfo {
   position: absolute;
   bottom: 0px;
   left: 0;
   z-index: 20;
 }
+
 .utilityList {
   list-style-type: none;
   margin: 0 0 30px 0px;
   padding: 0;
   width: 100%;
 }
+
 .utilityList li {
   margin: 0 15px 0 0;
   padding: 0 0 0 22px;
