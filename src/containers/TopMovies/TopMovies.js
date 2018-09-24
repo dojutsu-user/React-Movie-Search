@@ -8,24 +8,12 @@ class TopMovies extends Component {
       <div>
         <h2 className={cssClass.title}>Top Movies</h2>
         <div className={cssClass.container}>
-          <div className={cssClass.block}>
-            <Card name="ABCD" />
-          </div>
-          <div className={cssClass.block}>
-            <Card name="ABCD" />
-          </div>
-          <div className={cssClass.block}>
-            <Card name="ABCD" />
-          </div>
-          <div className={cssClass.block}>
-            <Card name="ABCD" />
-          </div>
-          <div className={cssClass.block}>
-            <Card name="ABCD" />
-          </div>
-          <div className={cssClass.block}>
-            <Card name="ABCD" />
-          </div>
+          <div className={cssClass.block}><Card name="ABCD" /></div>
+          <div className={cssClass.block}><Card name="ABCD" /></div>
+          <div className={cssClass.block}><Card name="ABCD" /></div>
+          <div className={cssClass.block}><Card name="ABCD" /></div>
+          <div className={cssClass.block}><Card name="ABCD" /></div>
+          <div className={cssClass.block}><Card name="ABCD" /></div>
         </div>
       </div>
     );

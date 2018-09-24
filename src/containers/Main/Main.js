@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../../components/UI/Navbar/Navbar";
 import Sidebar from "../../components/UI/Navbar/Sidebar/Sidebar";
 import Backdrop from "../../components/UI/Backdrop/Backdrop";
-import Homepage from "../../components/HomePage/HomePage";
+import Homepage from "../HomePage/HomePage";
 
 class Main extends Component {
   state = {
