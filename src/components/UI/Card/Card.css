@@ -15,10 +15,6 @@
   text-align: center;
 }
 
-.blogCard:hover .titleContent .h3 {
-  display: none;
-}
-
 .blogCard .colorOverlay {
   background: rgba(84, 104, 110, 0.4);
   width: 300px;
@@ -62,14 +58,6 @@
 
 .blogCard:hover .colorOverlay {
   background: rgba(41, 41, 41, 0.8);
-}
-
-.blogCard:hover .intro {
-  display: none;
-}
-
-.blogCard:hover .hr {
-  display: none;
 }
 
 .titleContent {

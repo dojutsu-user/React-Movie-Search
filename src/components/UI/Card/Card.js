@@ -19,7 +19,7 @@ class Card extends Component {
               {new Date(this.props.releaseDate).toDateString()}
             </div>
           </div>
-          <div className={cssClass.cardInfo}>{this.props.overview}</div>
+          <div className={cssClass.cardInfo}>{this.props.overview.slice(0, 180) + "...READ MORE"}</div>
           <div className={cssClass.utilityInfo}>
             <ul className={cssClass.utilityList}>
               <li className={cssClass.date}>
