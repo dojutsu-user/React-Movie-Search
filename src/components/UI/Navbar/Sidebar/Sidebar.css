@@ -31,6 +31,11 @@
   cursor: pointer;
 }
 
+.Sidebar ul a {
+  text-decoration: none;
+  color: black;
+}
+
 .Sidebar div {
   padding-bottom: 25px;
 }

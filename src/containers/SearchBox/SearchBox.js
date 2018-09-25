@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import cssClass from "./SearchBox.css";
 import Button from "../../components/UI/Button/Button";
+import { withRouter } from "react-router-dom";
 
 class SearchBox extends Component {
   state = {
@@ -13,7 +14,11 @@ class SearchBox extends Component {
 
   submitHandler = event => {
     event.preventDefault();
-    console.log("Query String -> " + this.state.searchString);
+    const queryString = "?query=" + encodeURIComponent(this.state.searchString);
+    this.props.history.push({
+      pathname: "/search",
+      search: queryString
+    });
   };
 
   render() {
@@ -36,4 +41,4 @@ class SearchBox extends Component {
   }
 }
 
-export default SearchBox;
+export default withRouter(SearchBox);

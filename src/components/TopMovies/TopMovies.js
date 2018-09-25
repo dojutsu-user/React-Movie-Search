@@ -1,19 +1,20 @@
 import React from "react";
 import cssClass from "./TopMovies.css";
 import Card from "../UI/Card/Card";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const topMovies = props => {
   const movieCards = props.topMovies.map(movie => (
-    <Link to={"/movie/" + movie.id}><div key={movie.id} className={cssClass.block}>
-      <Card
-        name={movie.original_title}
-        overview={movie.overview}
-        posterPath={movie.poster_path}
-        releaseDate={movie.release_date}
-        originalLanguage={movie.original_language}
-      />
-    </div>
+    <Link to={"/movie/" + movie.id} key={movie.id}>
+      <div className={cssClass.block}>
+        <Card
+          name={movie.original_title}
+          overview={movie.overview}
+          posterPath={movie.poster_path}
+          releaseDate={movie.release_date}
+          originalLanguage={movie.original_language}
+        />
+      </div>
     </Link>
   ));
   return (
