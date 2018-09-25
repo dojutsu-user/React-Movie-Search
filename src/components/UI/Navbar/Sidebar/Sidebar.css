@@ -1,6 +1,6 @@
 .Sidebar {
   z-index: 100;
-  background-color: #fff8ae;
+  background-color: #020410;
   width: 230px;
   height: 100%;
   position: fixed;
@@ -29,6 +29,7 @@
   margin: 10px 0;
   display: block;
   cursor: pointer;
+  color: white;
 }
 
 .Sidebar ul a {

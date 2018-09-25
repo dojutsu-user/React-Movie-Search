@@ -15,10 +15,10 @@ class SearchBox extends Component {
   submitHandler = event => {
     event.preventDefault();
     const queryString = "?query=" + encodeURIComponent(this.state.searchString);
-    this.props.history.push({
+    return this.props.history.push({
       pathname: "/search",
       search: queryString
-    });
+    })
   };
 
   render() {
@@ -33,7 +33,7 @@ class SearchBox extends Component {
             value={this.state.searchString}
           />
           <Button type="submit">
-            <i className="fa fa-search"> </i> Search
+          <span className={cssClass.ButtonText}><i className="fa fa-search"> </i> Search</span>
           </Button>
         </form>
       </div>
