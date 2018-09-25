@@ -30,7 +30,7 @@ class HomePage extends Component {
         const movieLabels = [];
         const results = response.data.results;
         let count = 0;
-        for (let i = 0; i < 15; ++i) {
+        for (let i = 0; i < 19; ++i) {
           posters.push(results[i].poster_path);
           movieLabels.push(results[i].original_title);
           count = count + 1;
