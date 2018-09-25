@@ -4,6 +4,7 @@ import TopMovies from "../../components/TopMovies/TopMovies";
 import HR from "../../components/UI/HR/HR";
 import AxiosInstance from "../../AxiosInstance";
 import { API_KEY } from "../../API_KEY";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 class HomePage extends Component {
   state = {
@@ -70,17 +71,25 @@ class HomePage extends Component {
   }
 
   render() {
-    return (
-      <React.Fragment>
-        <Coverflow
-          posters={this.state.moviePosters}
-          labels={this.state.movieLabels}
-        />
-        <HR />
-        <TopMovies topMovies={this.state.topMovies} />
-        <HR />
-      </React.Fragment>
-    );
+    let results = <Spinner />;
+    if (
+      this.state.moviePosters.length > 0 &&
+      this.state.movieLabels.length > 0 &&
+      this.state.topMovies.length > 0
+    ) {
+      results = (
+        <React.Fragment>
+          <Coverflow
+            posters={this.state.moviePosters}
+            labels={this.state.movieLabels}
+          />
+          <HR />
+          <TopMovies topMovies={this.state.topMovies} />
+          <HR />
+        </React.Fragment>
+      );
+    }
+    return results;
   }
 }
 
