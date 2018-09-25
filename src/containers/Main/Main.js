@@ -4,6 +4,9 @@ import Sidebar from "../../components/UI/Navbar/Sidebar/Sidebar";
 import Backdrop from "../../components/UI/Backdrop/Backdrop";
 import Homepage from "../HomePage/HomePage";
 import Footer from "../../components/Footer/Footer";
+import {Switch, Route} from "react-router-dom";
+import MoviePage from "../MoviePage/MoviePage";
+import {withRouter} from "react-router-dom"
 
 class Main extends Component {
   state = {
@@ -23,11 +26,14 @@ class Main extends Component {
           open={this.state.isSidebarOpen}
           clicked={this.toggleSidebarHandler}
         />
-        <Homepage />
+        <Switch>
+          <Route path="/movie/:name" component={MoviePage} />
+          <Route path="/" component={Homepage} />
+        </Switch>
         <Footer />
       </React.Fragment>
     );
   }
 }
 
-export default Main;
+export default withRouter(Main);

@@ -24,6 +24,10 @@
   margin-top: 5px;
 }
 
+.NavItems ul a {
+  color: black;
+}
+
 .NavItems {
   float: right;
   padding-right: 30px;

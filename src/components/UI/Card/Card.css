@@ -4,6 +4,9 @@
   padding: 0;
   float: left;
 }
+.Card:hover {
+  cursor: pointer;
+}
 
 .blogCard {
   width: 300px;
