@@ -12,8 +12,11 @@ const footer = () => {
               <p>
                 Made With <span style={{ color: "red" }}>&#10084;</span> By
                 Vaibhav Gupta
-                <div>
-                  <span className="fa fa-github"> </span>
+                <div className={cssClass.Social}>
+                  <span className={["fab", "fa-github", "fa-2x", cssClass.Github].join(' ')}> </span>
+                  <span class={["fab", "fa-linkedin", "fa-2x", cssClass.Linkedin].join(' ')}> </span>
+                  <span class={["fab", "fa-facebook-square", "fa-2x", cssClass.Facebook].join(' ')}> </span>
+                  <span class={["fab", "fa-twitter-square", "fa-2x", cssClass.Twitter].join(' ')}> </span>
                 </div>
               </p>
             </div>
