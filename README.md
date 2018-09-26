@@ -7,7 +7,7 @@ A simple movie search web app made purely using ReactJS which consumes the "The 
 * Responsive Navbar
 * Sticky and responsive footbar
 * Search movie using simple query
-* 
+* Options for additional search parameters.
 
 ## Setup
 1. Make a new folder and clone the repo: `git clone https://github.com/dojutsu-user/React-Movie-Search.git`
