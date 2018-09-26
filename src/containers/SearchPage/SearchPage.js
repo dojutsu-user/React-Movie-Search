@@ -126,7 +126,7 @@ class SearchPage extends Component {
         results = <Spinner />;
       }
 		}
-		console.log(this.props.location.search)
+
     return (
       <div>
         <h2 className={cssClass.title}>
@@ -134,7 +134,7 @@ class SearchPage extends Component {
           " (Total: {this.state.results.length})
         </h2>
         <form className={cssClass.ParamsForm} onSubmit={this.onSubmitHandler}>
-          <label for="includeAdult" className={cssClass.Label}>
+          <label htmlFor="includeAdult" className={cssClass.Label}>
             Adult
           </label>
           <input
@@ -144,7 +144,7 @@ class SearchPage extends Component {
             onChange={this.onInputChange}
             className={cssClass.Checkbox}
           />
-          <label className={cssClass.InputLabel} for="releaseYear">Year</label>
+          <label className={cssClass.InputLabel} htmlFor="releaseYear">Year</label>
           <input
             id="releaseYear"
             name="releaseYear"
@@ -156,10 +156,10 @@ class SearchPage extends Component {
           <ButtonStyle2>Submit</ButtonStyle2>
         </form>
         <InfiniteScroll
+          children={"randomText"}
           pageStart={0}
           loadMore={this.getResults}
           hasMore={this.state.hasMore}
-          children={"random"}
         >
           {results}
         </InfiniteScroll>

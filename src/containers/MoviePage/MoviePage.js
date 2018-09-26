@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import cssClass from "./MoviePage.css";
 import AxiosInstance from "../../AxiosInstance";
 import { API_KEY } from "../../API_KEY";
+import IMDbLogo from "../../assets/images/IMDbLogo.png";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 class MoviePage extends Component {
   state = {
@@ -13,7 +15,7 @@ class MoviePage extends Component {
       `/movie/${this.props.match.params.name}?api_key=${API_KEY}`
     )
       .then(response => {
-        console.log(response.data);
+        this.setState({ movieDetails: response.data });
       })
       .catch(error => {
         alert(error);
@@ -22,22 +24,56 @@ class MoviePage extends Component {
   }
 
   render() {
-    return (
-      <React.Fragment>
-        <div class={cssClass.container}>
-          <img
-            class={cssClass.imgA1}
-            src="https://image.tmdb.org/t/p/original/s4SmtlX13p1E2laSQqmVZQ8sYbe.jpg"
-          />
-          <img
-						class={cssClass.imgB1}
-						src="http://image.tmdb.org/t/p/w185/3IGbjc5ZC5yxim5W0sFING2kdcz.jpg"
-          />
-        </div>
-
-        <h1>Hello World</h1>
-      </React.Fragment>
-    );
+    let genres = null;
+    let details = <Spinner />;
+    if (this.state.movieDetails) {
+      genres = this.state.movieDetails.genres.map((genre, index) => (
+        <span className={cssClass.Genre} key={index}>
+          {genre.name}
+        </span>
+      ));
+      details = (
+        <React.Fragment>
+          <div className={cssClass.Wrapper}>
+            <div className={cssClass.one}>
+              <img
+                alt="Movie Poster"
+                src={
+                  "http://image.tmdb.org/t/p/w300" +
+                  this.state.movieDetails.poster_path
+                }
+              />
+            </div>
+            <div className={cssClass.MovieDetail}>
+              <h1 className={cssClass.MovieTitle}>
+                {this.state.movieDetails.original_title}
+              </h1>
+              <p className={cssClass.Tagline}>
+                {this.state.movieDetails.tagline}
+              </p>
+              <div className={cssClass.GenreSection}>{genres.slice(0, 4)}</div>
+              <div>
+                <a
+                  href={`https://www.imdb.com/title/${
+                    this.state.movieDetails.imdb_id
+                  }/`}
+                >
+                  <img
+                    alt="IMDb"
+                    className={cssClass.IMDbLogo}
+                    src={IMDbLogo}
+                  />
+                </a>
+              </div>
+              <div className={cssClass.OverView}>
+                <p>{this.state.movieDetails.overview}</p>
+              </div>
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    }
+    return details;
   }
 }
 

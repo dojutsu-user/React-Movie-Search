@@ -10,11 +10,6 @@ const navItems = () => {
           <span className="fa fa-home"> </span> Home
         </li>
       </Link>
-      <Link to="/">
-        <li>
-          <span className="fa fa-envelope-square"> </span> Contact Us
-        </li>
-      </Link>
       <SearchBox />
     </ul>
   );

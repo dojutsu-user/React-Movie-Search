@@ -1,16 +1,97 @@
-.container {
-  position: relative;
+.Wrapper {
+  overflow: hidden;
+  margin: 50px 0;
 }
-.imgA1 {
-	width: 40%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
+
+.Wrapper .one {
+  min-height: 400px;
+  padding: 10px;
 }
-.imgB1 {
-  position: absolute;
-  top: 70px;
-  left: 100px;
-  z-index: 3;
+.Wrapper .MovieDetail {
+  min-height: 400px;
+  padding: 10px;
+}
+.one {
+  float: left;
+}
+
+.MovieDetail {
+  background-color: white;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.MovieTitle {
+  margin: 0px auto;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 200;
+  padding: 0;
+  font-size: 50px;
+}
+
+.Tagline {
+  margin: 0;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 18px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.MovieDetail p {
+  margin-top: 20px;
+  padding: 0;
+}
+
+.Genre {
+  margin: 10px 5px;
+  border: 1px solid rgb(173, 173, 173);
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: rgb(104, 104, 104);
+  box-shadow: 3px 3px 10px #ccc;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.GenreSection {
+  margin: 0;
+  padding: 0;
+}
+.OverView {
+  width: 90%;
+  margin: 5px 20px;
+}
+
+.OverView p {
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 20px;
+  margin: 0px -20px;
+}
+
+.IMDbLogo {
+  margin-top: 20px;
+  width: 90px;
+}
+
+@media screen and (max-width: 750px) {
+  .one {
+    float: none;
+    margin-right: 0;
+    width: auto;
+    border: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .one img {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .MovieDetail {
+    margin: 10px 40px;
+  }
 }
