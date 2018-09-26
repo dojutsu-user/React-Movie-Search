@@ -5,6 +5,9 @@ import HR from "../../components/UI/HR/HR";
 import AxiosInstance from "../../AxiosInstance";
 import { API_KEY } from "../../API_KEY";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import ButtonStyle2 from "../../components/UI/Button/Style2/ButtonStyle2";
+import cssClass from "./HomePage.css";
+import { Link } from "react-router-dom";
 
 class HomePage extends Component {
   state = {
@@ -91,8 +94,15 @@ class HomePage extends Component {
             labels={this.state.movieLabels}
             movieIds={this.state.movieIds}
           />
-          <div style={{margin: "70px"}}> </div>
+          <div style={{ margin: "70px" }}> </div>
           <TopMovies topMovies={this.state.topMovies} />
+          <div className={cssClass.MoreTopMovies}>
+            <Link to="/top-movies">
+              <ButtonStyle2>See More Top Movies</ButtonStyle2>
+            </Link>
+          </div>
+          <br />
+          <br />
           <HR />
         </React.Fragment>
       );
