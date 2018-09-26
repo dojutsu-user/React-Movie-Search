@@ -10,6 +10,7 @@ class HomePage extends Component {
   state = {
     moviePosters: [],
     movieLabels: [],
+    movieIds: [],
     topMovies: []
   };
 
@@ -28,14 +29,20 @@ class HomePage extends Component {
       .then(response => {
         const posters = [];
         const movieLabels = [];
+        const movieIds = [];
         const results = response.data.results;
         let count = 0;
         for (let i = 0; i < 19; ++i) {
           posters.push(results[i].poster_path);
           movieLabels.push(results[i].original_title);
+          movieIds.push(results[i].id);
           count = count + 1;
         }
-        this.setState({ movieLabels: movieLabels, moviePosters: posters });
+        this.setState({
+          movieLabels: movieLabels,
+          moviePosters: posters,
+          movieIds: movieIds
+        });
       })
       .catch(error => {
         alert(
@@ -51,7 +58,7 @@ class HomePage extends Component {
     const currentYear = date.getFullYear();
     const currentDate = this.getCurrentDate();
     AxiosInstance.get(
-      `/discover/movie?primary_release_year=${currentYear}&primary_release_date.lte=${currentDate}&sort_by=popularity.desc&api_key=${API_KEY}`
+      `/discover/movie?primary_release_year=${currentYear}&primary_release_date.lte=${currentDate}&sort_by=popularity.desc&language=en-US&api_key=${API_KEY}`
     )
       .then(response =>
         this.setState({ topMovies: response.data.results.slice(0, 9) })
@@ -82,8 +89,9 @@ class HomePage extends Component {
           <Coverflow
             posters={this.state.moviePosters}
             labels={this.state.movieLabels}
+            movieIds={this.state.movieIds}
           />
-          <HR />
+          <div style={{margin: "70px"}}> </div>
           <TopMovies topMovies={this.state.topMovies} />
           <HR />
         </React.Fragment>

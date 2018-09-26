@@ -9,3 +9,60 @@
   font-family: "IBM Plex Sans", sans-serif;
   margin-left: 60px;
 }
+
+.MovieName {
+  /* width: 100%; */
+  margin: 20px 0;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.MovieName a{
+  text-decoration: none;
+}
+
+.Name {
+  padding: 12px;
+  background-color:rgb(43, 43, 43);
+  margin: 10px 10px;
+  color:white;
+  border: none;
+}
+
+.Name:hover {
+  outline: none;
+  border: none;
+}
+
+.Name:active {
+  outline: none;
+  border: none
+}
+.Name:focus {
+  outline: none;
+  border: none;
+}
+
+.ReadMore {
+  padding: 10px;
+  border:2px solid rgb(43, 43, 43);
+  margin: 10px 0px;
+  color:rgb(43, 43, 43);
+  border: 2px solid rgb(43, 43, 43);
+  background-color: transparent;
+}
+
+.ReadMore:hover {
+  background-color: rgb(43, 43, 43);
+  color: white;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.ReadMore:active {
+  outline: none;
+}
+.ReadMore:focus {
+  outline: none;
+}
