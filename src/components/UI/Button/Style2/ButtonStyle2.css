@@ -1,0 +1,22 @@
+.Style2 {
+  padding: 10px;
+  border: 2px solid rgb(43, 43, 43);
+  margin: 10px 0px;
+  color: rgb(43, 43, 43);
+  border: 2px solid rgb(43, 43, 43);
+  background-color: transparent;
+}
+
+.Style2:hover {
+  background-color: rgb(43, 43, 43);
+  color: white;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.Style2:active {
+  outline: none;
+}
+.Style2:focus {
+  outline: none;
+}
