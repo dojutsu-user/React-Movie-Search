@@ -52,6 +52,10 @@ class MoviePage extends Component {
                 {this.state.movieDetails.tagline}
               </p>
               <div className={cssClass.GenreSection}>{genres.slice(0, 4)}</div>
+              <div className={cssClass.ReleaseDate}>
+                <strong>Release Date:</strong>{" "}
+                {new Date(this.state.movieDetails.release_date).toDateString()}
+              </div>
               <div>
                 <a
                   href={`https://www.imdb.com/title/${
