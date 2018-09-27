@@ -1,6 +1,12 @@
 # React-Movie-Search
 A simple movie search web app made purely using ReactJS which consumes the "The Movie Database (TMDB)" API. It is created with using `create-react-app`. 
 
+[![Javascript](https://badges.frapsoft.com/javascript/code/javascript.png?v=101)](https://github.com/ellerbrock/javascript-badges/)
+[![Open Source Love png2](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/dojutsu-user/React-Movie-Search)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://react-movie-search.netlify.com/)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/dojutsu-user/React-Movie-Search/blob/master/LICENSE)
+
+
 ## Features
 * Responsive coverflow on the homepage
 * CSS loader
