@@ -12,7 +12,7 @@ A simple movie search web app made purely using ReactJS which consumes the "The 
 * CSS loader
 * Responsive navbar
 * Sticky and responsive footbar
-* Search movie using simple query
+* Search any movie using simple query
 * Options for additional search parameters
 * Infinite scrolling
 * Clean UI
