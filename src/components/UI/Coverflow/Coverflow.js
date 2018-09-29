@@ -5,9 +5,20 @@ import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 class coverflow extends Component {
-  state = {
-    selectedMovieIndex: 5
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedMovieIndex: 5,
+      width: document.body.offsetWidth
+    };
+    window.addEventListener("resize", () => {
+      this.setState(prevState => {
+        return {
+          width: document.body.offsetWidth
+        };
+      });
+    });
+  }
   render() {
     let imagesArr = null;
     let coverFlow = <div> </div>;
@@ -19,7 +30,7 @@ class coverflow extends Component {
         <CoverFlow
           imagesArr={imagesArr}
           labelsArr={this.props.labels}
-          width={1430}
+          width={this.state.width}
           height={335}
           itemRatio="4:6"
           background="rgb(236, 236, 235)"
@@ -34,7 +45,9 @@ class coverflow extends Component {
         <div className={cssClass.Coverflow}>{coverFlow}</div>
         {this.state.selectedMovieIndex >= 0 ? (
           <div className={cssClass.MovieName}>
-          <button className={cssClass.Name}>{this.props.labels[this.state.selectedMovieIndex]}</button>
+            <button className={cssClass.Name}>
+              {this.props.labels[this.state.selectedMovieIndex]}
+            </button>
             <Link
               to={
                 "/movie/" + this.props.movieIds[this.state.selectedMovieIndex]
